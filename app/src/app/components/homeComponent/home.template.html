@@ -1,0 +1,50 @@
+<div fxLayout="column " style="padding:10px" fxFlex="100" fxLayoutAlign=" " fxShow="true" fxHide="false">
+  <mat-sidenav-container style="  background-color: #3F51B5;" fullscreen="fullscreen">
+    <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+      <mat-toolbar class="toolbar1">
+        <div fxLayout="column " fxLayoutAlign="start start" fxShow="true" fxHide="false" fxHide.gt-xs="true" fxFlex.xs="50" fxFlex.gt-xs="0">
+          <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon>
+        </div>
+        <div fxLayout="column " fxFlex="50" fxLayoutAlign="start start" fxShow="true" fxHide="false" fxLayoutAlign.xs="end end">
+          <div fxLayout="row " fxFlex="100" fxLayoutAlign=" " fxShow="true" fxHide="false">
+            <button mat-button="" style="  font-size: 19px;" (click)="logout()">Logout</button>
+          </div>
+        </div>
+        <div fxLayout="column " fxFlex="50" fxLayoutAlign="end end" fxShow="true" fxHide="false" fxHide.xs="true" fxHide.sm="true">
+          <div fxLayout="row " fxFlex="100" fxLayoutAlign=" " fxShow="true" fxHide="false">
+            <mat-icon class="phone">phone</mat-icon>
+            <button mat-button="" style="   " class="btn">9600569582</button>
+            <mat-icon>mail</mat-icon>
+            <button mat-button="" class="btn">hello@roost.com</button>
+            <img imgSrc="Web/google-plus-64.png" class="google">
+            <img imgSrc="Web/twitter-64.png" class="twitter">
+            <img imgSrc="Web/facebook-64.png" class="facebook">
+          </div>
+        </div>
+      </mat-toolbar>
+    </div>
+    <div fxLayout="row " style="padding:2%" fxFlex="none" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <button mat-raised-button="" class="btn-height" color="accent">RENT</button>
+      <mat-form-field style="margin-top: 8%;background-color:white;   width: 593px;" class="btn-height">
+        <input matInput="" placeholder=" ">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+      <bh-carousel [imageData]="imageData" [limitImage]="limit" style="width:100%" *ngIf="imageData"></bh-carousel>
+    </div>
+    <footer>
+      <div fxLayout="row " style="width:100%" class="footer" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+        <p>Copyright &#xA9; 2018 Neutrinos</p>
+      </div>
+    </footer>
+    <mat-sidenav #sidenav="" class="sidenav" (toggle)="sidenav.toggle()">
+      <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+        <mat-list>
+          <mat-list-item style="color:white;cursor:pointer;">Home</mat-list-item>
+          <mat-list-item style="color:white;cursor:pointer;">Dashboard</mat-list-item>
+          <mat-list-item style="color:white;cursor:pointer;">Contact</mat-list-item>
+        </mat-list>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

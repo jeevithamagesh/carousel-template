@@ -1,0 +1,28 @@
+<div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+  <div fxLayout="row " fxLayoutAlign=" " fxShow="false" fxHide="true" fxHide.xs="false" ngClass.xs="imgClass200" ngClass.gt-xs="imgClass300" *ngIf="false">
+    <div fxLayout="column " style="background:white;padding:5px;" fxFlex="100" fxLayoutAlign=" " fxShow="true" fxHide="false">
+      <div fxLayout="column " style="margin-top:0%;" fxFlex="100" fxLayoutAlign="end none" fxShow="true" fxHide="false" [ngStyle]="{ &apos;background-image&apos;: &apos;url(&apos; + dataSet[currentXsIndex].imgSrc + &apos;)&apos;, &apos;background-size&apos;: &apos;cover&apos;}">
+        <div fxLayout="column " style="padding-bottom:5px;" fxFlex="20" fxLayoutAlign=" " fxShow="true" fxHide="false">
+          <h4 class="price-font">{{dataSet[currentXsIndex].price}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row " style="margin: 30px 30px 0 30px;    padding-top: 11px;" fxFlex="100" fxLayoutGap="10px" fxLayoutAlign="space-around center" fxShow="true" fxHide="false" *ngIf="true">
+    <div fxLayout="column " fxFlex="5" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <button mat-mini-fab="" class="arrow-color" (click)="changeDataSet(-1)">&lt;</button>
+    </div>
+    <div fxLayout="column " style="background:white;padding:3px;" fxFlex="90" fxLayoutAlign=" " fxShow="true" fxHide="false" *ngFor="let row of dataSet.slice(0,limitImage);let i=index;" fxFlex.xs="75">
+      <div fxLayout="column " fxFlex="100" fxLayoutAlign="end none" fxShow="true" fxHide="false" ngClass.lg="imgClass200" ngClass.gt-lg="imgClass350" ngClass.lt-lg="imgClass150" [ngStyle]="{ &apos;background-image&apos;: &apos;url(&apos; + row.imgSrc + &apos;)&apos;, &apos;background-size&apos;: &apos;cover&apos;}">
+        <div fxLayout="column " style="padding-bottom:20px;" fxFlex="20" fxLayoutAlign=" " fxShow="true" fxHide="false">
+          <h4 class="price-font">{{row.imgPrice}}</h4>
+          <h4 class="top  header-margin">{{row.imgHeader}}</h4>
+          <h4 class="bottom">{{row.imgDesc}}</h4>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column " fxFlex="5" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <button mat-mini-fab="" class="arrow-color" (click)="changeDataSet(1)">&gt;</button>
+    </div>
+  </div>
+</div>
