@@ -164,7 +164,7 @@
                     {
                         "0": false,
                         "_key": "style",
-                        "_value": "background:white;padding:5px;",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -228,7 +228,7 @@
                         {
                             "0": false,
                             "_key": "style",
-                            "_value": "margin-top:0%;",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -277,7 +277,7 @@
                         {
                             "8": false,
                             "_key": "[ngStyle]",
-                            "_value": "{ 'background-image': 'url(' + dataSet[currentXsIndex].imgSrc + ')', 'background-size': 'cover'}",
+                            "_value": "{ 'background-image': 'url(' + dataSet[currentXsIndex].imgSrc + ')', 'background-size': 'cover','background-repeat' : 'round'}",
                             "_type": "kv",
                             "_attrDef": "c"
                         },
@@ -300,7 +300,7 @@
                             {
                                 "0": false,
                                 "_key": "style",
-                                "_value": "padding-bottom:5px;",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -395,7 +395,7 @@
                 {
                     "0": false,
                     "_key": "style",
-                    "_value": "margin: 30px 30px 0 30px;    padding-top: 11px;",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -460,6 +460,18 @@
                     "_value": "center",
                     "_type": "a",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "ngClass.gt-xs",
+                    "_value": "carrow",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "ngClass.xs",
+                    "_value": "small-fab",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
             "90c0c9f4-0647-6462-2215-f9c311fd842e": {
@@ -547,7 +559,7 @@
                         {
                             "2": false,
                             "_key": "fabicon",
-                            "_value": "<",
+                            "_value": "<mat-icon>keyboard_arrow_left</mat-icon>",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -573,14 +585,14 @@
                     {
                         "0": false,
                         "_key": "style",
-                        "_value": "background:white;padding:3px;",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "1": false,
                         "_key": "class",
-                        "_value": "",
+                        "_value": "carcol1",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -726,7 +738,7 @@
                         {
                             "11": false,
                             "_key": "[ngStyle]",
-                            "_value": "{ 'background-image': 'url(' + row.imgSrc + ')', 'background-size': 'cover'}",
+                            "_value": "{ 'background-image': 'url(' + row.imgSrc + ')', 'background-size': 'cover','background-repeat':'round'}",
                             "_type": "kv",
                             "_attrDef": "c"
                         },
@@ -964,7 +976,7 @@
                         {
                             "2": false,
                             "_key": "fabicon",
-                            "_value": ">",
+                            "_value": "<mat-icon>keyboard_arrow_right</mat-icon>",
                             "_type": "a",
                             "_attrDef": "p"
                         },

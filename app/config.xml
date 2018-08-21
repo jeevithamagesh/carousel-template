@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="co.ideas.neutrinos" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>carousel-app</name>
+    <name>carousel</name>
     <description>carousel</description>
     <author email="ideas@neutrinos.co" href="http://neutrinos.co">
         Neutrinos Team

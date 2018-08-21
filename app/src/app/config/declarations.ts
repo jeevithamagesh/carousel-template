@@ -60,14 +60,14 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-demoComponent
-demoComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
-loginComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-carouselComponent
-carouselComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
-homeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-demoComponent
+  demoComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
+  loginComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-carouselComponent
+  carouselComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
+  homeComponent,
 
 ];
 
@@ -86,10 +86,10 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-imageserviceService
-imageserviceService,
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-carouselserviceService
-carouselserviceService,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-imageserviceService
+  imageserviceService,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-carouselserviceService
+  carouselserviceService
 
 ];
 
@@ -98,5 +98,5 @@ carouselserviceService,
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'login', component: loginComponent},{path: 'home', component: homeComponent, canActivate: [NAuthGuardService]},{path: 'carousel', component: carouselComponent, canActivate: [NAuthGuardService]},{path: 'demo', component: demoComponent},{path: '', redirectTo: 'login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+export const appRoutes = [{ path: 'login', component: loginComponent }, { path: 'home', component: homeComponent, canActivate: [NAuthGuardService] }, { path: 'carousel', component: carouselComponent, canActivate: [NAuthGuardService] }, { path: 'demo', component: demoComponent }, { path: '', redirectTo: 'login', pathMatch: 'full' }, { path: '**', component: PageNotFoundComponent }]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

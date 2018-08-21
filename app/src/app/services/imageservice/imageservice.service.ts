@@ -48,9 +48,12 @@ export class imageserviceService {
             imgHeader: "Nullam finibus libero"
         }
     ];
-
+    sidenavList = ["Home", "Dashboard", "Contact", "Logout"]
     getImages() {
         return this.images;
+    }
+    getHomeList() {
+        return this.sidenavList;
     }
 
 }

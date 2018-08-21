@@ -5,7 +5,7 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NLoginService } from 'neutrinos-seed-services';
 import { Router } from '@angular/router'
 import { NSessionStorageService } from 'neutrinos-seed-services';
-
+import { NSystemService } from 'neutrinos-seed-services';
 /**
 * Model import Example :
 * import { HERO } from '../models/hero.model';
@@ -26,16 +26,24 @@ export class loginComponent implements OnInit {
     username;
     remember;
     password;
-
+    rememberVal: boolean;
+    instance;
 
     constructor(private bdms: NDataModelService, private loginservice: NLoginService, private router: Router, private local: NSessionStorageService) {
-      this.dm = new ModelMethods(bdms);
+        this.dm = new ModelMethods(bdms);
+        this.instance = NSystemService.getInstance();
     }
 
     ngOnInit() {
+        if (this.instance.deviceType != 'browser') {
+            this.rememberVal = true;
+        }
 
     }
     submit() {
+        if (this.rememberVal == true) {
+            this.remember = true;
+        }
         this.loginservice.login(this.username, this.password, this.remember).subscribe(data => {
             // console.log(JSON.stringify(data.accessToken));
             if (JSON.stringify(data['accessToken'])) {

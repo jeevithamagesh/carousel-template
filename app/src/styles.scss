@@ -3,14 +3,23 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
 
+$background-color : #3F51B5;
+$headerFooterColor : #273690;
+
 body{
-     background-color: #3F51B5;
+     background-color: $background-color;
     font-family: 'Raleway', sans-serif;
 }
 .price-font{
     font-size: 13px;
     color: white;
     padding-left: 5px;
+}
+.fonts{
+    font-family: 'Raleway', sans-serif !important;
+}
+.weight-font{
+    font-weight: bold;
 }
 .top {
     color: white;
@@ -23,7 +32,7 @@ body{
 }
 .imgClass350{
     height:235px;
-}
+    }
 .imgClass300{
     height:235px;
 }
@@ -31,10 +40,12 @@ body{
     height:235px;
 }
 .imgClass200{
-    height:200px;
+    // height:200px;
+    height:222px;
        }
 .imgClass150{
-    height:211px;
+    height:220px;
+       
 }
 .google{
           width: 30px;
@@ -56,7 +67,7 @@ height: 22px;
 }
 .toolbar1{
    
-   background-color: #3c4ca9;
+   background-color: $headerFooterColor;
     color: rgba(255,255,255,.87);
     font-size: 19px !important;
 }
@@ -84,10 +95,11 @@ hidePlaceHolder .mat-form-field-underline {
     padding-left: 15px;
 }
 .footer{
-    background: #273690;
+    background: $headerFooterColor;
     color: white;
     bottom: 0px;
     position: fixed;
+    width:100% !important;
 }
 .mat-icon {
     background-repeat: no-repeat;
@@ -104,7 +116,7 @@ hidePlaceHolder .mat-form-field-underline {
     width: 142px;
      position: absolute !important;
      top:56px !important;
- }
+    }
 .mat-checkbox-layout .mat-checkbox-label {
  line-height: 24px;
 font-size: 72%;
@@ -147,4 +159,37 @@ font-size: 72%;
 .btn{
     font-size: 19px !important;   
      margin-left: -3% !important;
+}
+.pointer{
+    cursor: pointer;
+}
+.sidenavc{
+    background-color: #3F51B5 !important;
+}
+.rows{
+    padding:2% !important;
+}
+.search{
+    background-color:white !important;  
+     width: 593px !important;
+     height: 39px !important;
+    margin-top: 8%  !important;
+   }
+.sidelist{
+     color:white !important;
+}
+.login{
+    margin-top:71% !important;   
+     width: 100% !important;
+}
+.carrow{
+    margin: 30px 30px 0 30px !important;    
+    padding-top: 11px !important;
+}
+.carcol1{
+    background:white !important;
+    padding:3px !important;
+}
+.small-fab{
+        margin: 35px 12px 0 12px;
 }

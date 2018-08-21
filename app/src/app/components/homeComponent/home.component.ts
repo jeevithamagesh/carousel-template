@@ -1,11 +1,12 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { imageserviceService } from '../../services/imageservice/imageservice.service';
 import { carouselserviceService } from '../../services/carouselservice/carouselservice.service';
 import { NLogoutService } from 'neutrinos-seed-services';
-import {Router} from '@angular/router'
+import { Router } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
 
 /**
 * Model import Example :
@@ -23,28 +24,39 @@ import {Router} from '@angular/router'
 })
 
 export class homeComponent implements OnInit {
+    @ViewChild('sidenav') sidenav: MatSidenav;
     dm: ModelMethods;
     currentXsIndex = 0;
     splicedDataSet = [];
     dataSet;
     imageData;
     limit;
+    homeList;
 
-    constructor(private bdms: NDataModelService, private imgService: imageserviceService, private cService: carouselserviceService, private logoutservice: NLogoutService,private router:Router) {
+    constructor(private bdms: NDataModelService, private imgService: imageserviceService, private cService: carouselserviceService, private logoutservice: NLogoutService, private router: Router) {
         this.dm = new ModelMethods(bdms);
         // this.get('imagedatas');
     }
 
     ngOnInit() {
         this.imageData = this.imgService.getImages();
+        this.homeList = this.imgService.getHomeList();
+
     }
     ngDoCheck() {
-       
+
         this.limit = this.cService.assignLimit(1, 2, 4);
+        if (this.limit != 1) {
+            this.sidenav.close();
+        }
     }
-    logout(){
+    logout() {
         this.logoutservice.logout();
         this.router.navigate(['/login']);
+    }
+    // function for onclick key binding
+    searchToDo(event: any) {
+
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -127,5 +139,7 @@ export class homeComponent implements OnInit {
             })
     }
 
-
+    trigger(event) {
+        console.log(event);
+    }
 }
